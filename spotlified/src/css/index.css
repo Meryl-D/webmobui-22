@@ -1,6 +1,60 @@
 @import 'normalize.css';
-@import 'nav.css';
+@import 'footer.css';
+@import 'header.css';
+@import 'home.css';
+
+* {
+  --wine-red: #571D33;
+  --off-white: #D7CEC5;
+  --charcoal: #0F1B24;
+  --light-brown: #BE9081;
+  --dark-brown: #754A44;
+
+  --default-transition: all 0.2s ease;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Montserrat', sans-serif;
+  color: var(--charcoal);
+  text-decoration: none;
+}
+
+html, body {
+  height: 100vh;
+}
 
 body {
-  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--off-white);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-grow: 1;
+
+  width: 80vw;
+  max-width: 800px;
+  padding: 4vh 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(30px, 3vw, 48px);
+}
+
+h2 {
+  font-size: clamp(24px, 2vw, 30px);
+}
+
+@media all and (max-width: 768px) {
+  main {
+    width: 90vw;
+  }
 }

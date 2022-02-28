@@ -1,0 +1,61 @@
+main .title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.playlists .container {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+
+  margin-top: 1.5rem;
+}
+
+.playlist-btn, .song-btn {
+  width: clamp(6rem, 13vw, 8rem);
+  border: 3px solid;
+  border-radius: 60px;
+  padding: clamp(1rem, 1.5vw, 1.3rem);
+
+  text-align: center;
+  font-size: clamp(15px, 1.6vw , 18px);
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.playlist-btn  {
+  border-color: var(--light-brown);
+  color: var(--light-brown);
+}
+
+.playlist-btn:hover {
+  color: var(--off-white);
+  border-color: var(--light-brown);
+  background-color: var(--light-brown);
+  transition: var(--default-transition);
+}
+
+.songs {
+  display: flex;
+  justify-content: center;
+}
+
+.song-btn {
+  border-color: var(--wine-red);
+  color: var(--off-white);
+  background-color: var(--wine-red);
+}
+
+.song-btn:hover {
+  color: var(--wine-red);
+  background-color: transparent;
+  transition: var(--default-transition);
+}
+
+@media all and (max-width: 768px) {
+  
+}
