@@ -134,6 +134,10 @@ main section.active { /* avec la classe "active", on affiche la section */
   align-items: center;
 }
 
+#home {
+  height: 100%;
+}
+
 /********************************************************************************/
 /* footer */
 

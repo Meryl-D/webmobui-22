@@ -30,7 +30,7 @@ ul.list li:first-of-type {
 
 /* un lien est optionnellement supporté. Il doit donc prendre toute la place et devenir lui-même une flex box
    pour agir comme le li de base */
-ul.list li a {
+#list ul.list li a {
   /* toute la taille dispo du parent */
   flex: 1;
 
