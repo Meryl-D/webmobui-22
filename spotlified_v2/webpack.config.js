@@ -39,7 +39,8 @@ module.exports = {
   // Dev server config
   devServer: {
     // Enable webpack hot module replacement without reloading, when possible
-    hot: true,
+    hot: false,
+    liveReload: false,
     // Open browser on server start
     open: true,
     // Statit directory for non-compilable items

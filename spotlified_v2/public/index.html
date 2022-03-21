@@ -15,6 +15,9 @@
   <!-- Stylesheet principale (main.css, car c'est le nom de sortie utilisé par Webpack) -->
   <link rel="stylesheet" href="main.css" />
 
+  <!-- Lien vers le fichier manifest pour la PWA -->
+  <link rel="manifest" href="/manifest.webmanifest" />
+
   <!-- Javascript principal (main.js, car c'est le nom de sortie utilisé par Webpack) -->
   <!-- ...à quoi sert le defer ? :) -->
   <script src="main.js" defer></script>
@@ -130,15 +133,15 @@
 
     <!------------------------------------------------------------------------------------------------------------>
 
-    <section class="songs">
-      <h4><a href="#artists">Artistes</a><span></span></h4>
+    <section id="songs">
+      <h4></h4>
       <ul class="list"></ul>
       <template id="songs-item-template">
         <li>
           <div class="list-item-title"></div>
           <div class="list-item-actions">
-            <button type="button" class="icon-button add-playlist">
-              <span class="material-icons">playlist_add</span>
+            <button type="button" class="icon-button">
+              <span class="material-icons fav-button">favorite_border</span>
             </button>
             <button type="button" class="icon-button">
               <a href="#player">
@@ -152,21 +155,25 @@
 
     <!------------------------------------------------------------------------------------------------------------>
 
-    <section id="list">
+    <section id="favorites">
       <h4>
-        Playlists
-        <button type="button" class="icon-button align-right">
-          <span class="material-icons">add</span>
-        </button>
+        Favoris
       </h4>
       <ul class="list"></ul>
-      <template id="list-item-template">
-        <a href="#">
-          <div class="list-item-title">Never going home</div>
+      <template id="fav-item-template">
+        <li>
+          <div class="list-item-title"></div>
           <div class="list-item-actions">
-            <span class="material-icons">chevron_right</span>
+            <button type="button" class="icon-button">
+              <span class="material-icons toggle-fav">favorite</span>
+            </button>
+            <button type="button" class="icon-button">
+              <a href="#player">
+                <span class="material-icons play-song">play_arrow</span>
+              </a>
+            </button>
           </div>
-        </a>
+        </li>
       </template>
     </section>
 
@@ -187,9 +194,9 @@
         <span class="material-icons">library_music</span>
         <span>Musique</span>
       </a>
-      <a href="#list">
-        <span class="material-icons">playlist_play</span>
-        <span>Playlists</span>
+      <a href="#favorites">
+        <span class="material-icons">favorite</span>
+        <span>Favoris</span>
       </a>
     </nav>
   </footer>
