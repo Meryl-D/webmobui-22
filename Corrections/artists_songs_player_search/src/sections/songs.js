@@ -10,12 +10,12 @@ const songListItemTemplate = songsSection.querySelector('#song-list-item-templat
 // Render une chanson dans la liste
 function renderSong(song, songs) {
   const newSong = songListItemTemplate.content.cloneNode(true) // true pour cloner également les enfants du node
-  newSong.querySelector('.list-item-title').innerText = song.title
+  newSong.querySelector('.list-item-title').innerText = song.title;
   newSong.querySelector('.play-button').addEventListener('click', () => {
-    playSong(song, songs)
-    window.location.hash = '#player'
+    playSong(song, songs);
+    window.location.hash = '#player';
   })
-  songList.append(newSong)
+  songList.append(newSong);
 }
 
 // Itère sur toutes les chansons

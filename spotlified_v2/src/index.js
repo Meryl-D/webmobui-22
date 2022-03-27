@@ -25,7 +25,7 @@ function toggleNav(section) {
 
 // Affichage d'une section
 const displaySection = () => {
-  // Comme nos hash et nos ids de section sont les mêmes, hash = sectionid
+  // Comme nos hash et nos ids de section sont les mêmes, hash = section
   const section = window.location.hash || '#home'
   const splitHash = section.split('-');
 
